@@ -1,4 +1,3 @@
-
 import iziToast from 'izitoast';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
@@ -6,8 +5,6 @@ import 'izitoast/dist/css/iziToast.min.css';
 
 export function renderImages(images) {
     const gallery = document.querySelector('.gallery');
-
-    // clearGallery();
 
     images.hits.forEach(image => {
         const cardLink = document.createElement('a');

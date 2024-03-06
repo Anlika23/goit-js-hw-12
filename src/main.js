@@ -19,14 +19,11 @@ document.addEventListener("DOMContentLoaded", async function () {
         await handleSearch(query, true); 
     });
 
-    
-
     loadMoreButton.addEventListener('click', async function () {
         currentPage++;
         const query = document.querySelector('.search-form input[type="text"]').value.trim();
         await handleSearch(query, false); 
     });
-
 
     updateGallery(); 
 });
