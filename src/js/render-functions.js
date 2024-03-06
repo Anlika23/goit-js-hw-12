@@ -1,4 +1,3 @@
-'use strict';
 
 import iziToast from 'izitoast';
 import SimpleLightbox from 'simplelightbox';
@@ -7,6 +6,9 @@ import 'izitoast/dist/css/iziToast.min.css';
 
 export function renderImages(images) {
     const gallery = document.querySelector('.gallery');
+
+    // clearGallery();
+
     images.hits.forEach(image => {
         const cardLink = document.createElement('a');
         cardLink.href = image.largeImageURL;
@@ -42,7 +44,6 @@ export function toggleLoadMoreButton(totalHits, currentPage) {
     }
 }
 
-// Функція для створення контейнера з текстом та числовим значенням
 function createMetricContainer(label, value) {
     const container = document.createElement('div');
     container.classList.add('metric-container');
@@ -50,7 +51,7 @@ function createMetricContainer(label, value) {
     const labelSpan = document.createElement('span');
     labelSpan.textContent = label;
     labelSpan.classList.add('metric-label');
-    labelSpan.style.fontWeight = 'bold'; 
+    labelSpan.style.fontWeight = 'bold';
     container.appendChild(labelSpan);
 
     const valueSpan = document.createElement('span');
@@ -61,7 +62,6 @@ function createMetricContainer(label, value) {
     return container;
 }
 
-// Функція для показу індикатора завантаження
 export function showLoadingIndicator() {
     const loadingIndicator = document.querySelector('.loading-indicator');
     loadingIndicator.textContent = 'Loading images, please wait...';
